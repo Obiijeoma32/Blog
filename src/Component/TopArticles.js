@@ -1,7 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import post1 from "./Images/article1.png";
 import post2 from "./Images/article2.png";
+import ViewComment from "./ViewComment";
+import AddComment from "./AddComment";
 function TopArticles() {
+  const [viewComments, setViewComments] = useState(false);
+  const [addComments, setAddComments] = useState(false);
   const containerRef = useRef(null);
   const scrollLeft = () => {
     if (containerRef.current) {
@@ -30,7 +34,10 @@ function TopArticles() {
             </div>
             <div className=" flex w-full gap-[20px] justify-start items-center">
               <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-              <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+              <div
+                onClick={() => setViewComments(!viewComments)}
+                className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -42,7 +49,13 @@ function TopArticles() {
                 </svg>
                 20 Comments
               </div>
-              <div className="w-fit p-[10px]">
+              <div
+                onClick={() => {
+                  setAddComments(!addComments);
+                  setViewComments(false);
+                }}
+                className=" cursor-pointer w-fit p-[10px]"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.5 4.5H16.5M13.5 1.5V7.5" stroke="#001F3F" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -66,7 +79,10 @@ function TopArticles() {
             </div>
             <div className=" flex w-full gap-[20px] justify-start items-center">
               <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-              <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+              <div
+                onClick={() => setViewComments(!viewComments)}
+                className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -78,7 +94,13 @@ function TopArticles() {
                 </svg>
                 20 Comments
               </div>
-              <div className="w-fit p-[10px]">
+              <div
+                onClick={() => {
+                  setAddComments(!addComments);
+                  setViewComments(false);
+                }}
+                className=" cursor-pointer w-fit p-[10px]"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.5 4.5H16.5M13.5 1.5V7.5" stroke="#001F3F" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -102,7 +124,10 @@ function TopArticles() {
             </div>
             <div className=" flex w-full gap-[20px] justify-start items-center">
               <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-              <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+              <div
+                onClick={() => setViewComments(!viewComments)}
+                className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -114,7 +139,13 @@ function TopArticles() {
                 </svg>
                 20 Comments
               </div>
-              <div className="w-fit p-[10px]">
+              <div
+                onClick={() => {
+                  setAddComments(!addComments);
+                  setViewComments(false);
+                }}
+                className=" cursor-pointer w-fit p-[10px]"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.5 4.5H16.5M13.5 1.5V7.5" stroke="#001F3F" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -138,7 +169,10 @@ function TopArticles() {
             </div>
             <div className=" flex w-full gap-[20px] justify-start items-center">
               <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-              <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+              <div
+                onClick={() => setViewComments(!viewComments)}
+                className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -150,7 +184,13 @@ function TopArticles() {
                 </svg>
                 20 Comments
               </div>
-              <div className="w-fit p-[10px]">
+              <div
+                onClick={() => {
+                  setAddComments(!addComments);
+                  setViewComments(false);
+                }}
+                className=" cursor-pointer w-fit p-[10px]"
+              >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.5 4.5H16.5M13.5 1.5V7.5" stroke="#001F3F" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                   <path
@@ -204,7 +244,7 @@ function TopArticles() {
               </div>
               <div className=" flex w-full gap-[20px] justify-start items-center">
                 <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-                <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+                <div onClick={() => setViewComments(!viewComments)} className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                     <path
@@ -216,7 +256,13 @@ function TopArticles() {
                   </svg>
                   20 Comments
                 </div>
-                <div className="w-fit p-[10px]">
+                <div
+                  onClick={() => {
+                    setAddComments(!addComments);
+                    setViewComments(false);
+                  }}
+                  className=" cursor-pointer w-fit p-[10px]"
+                >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 4.5H16.5M13.5 1.5V7.5" stroke="#001F3F" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                     <path
@@ -240,7 +286,7 @@ function TopArticles() {
               </div>
               <div className=" flex w-full gap-[20px] justify-start items-center">
                 <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-                <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+                <div onClick={() => setViewComments(!viewComments)} className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                     <path
@@ -252,7 +298,13 @@ function TopArticles() {
                   </svg>
                   20 Comments
                 </div>
-                <div className="w-fit p-[10px]">
+                <div
+                  onClick={() => {
+                    setAddComments(!addComments);
+                    setViewComments(false);
+                  }}
+                  className=" cursor-pointer w-fit p-[10px]"
+                >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 4.5H16.5M13.5 1.5V7.5" stroke="#001F3F" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                     <path
@@ -276,7 +328,7 @@ function TopArticles() {
               </div>
               <div className=" flex w-full gap-[20px] justify-start items-center">
                 <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-                <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+                <div onClick={() => setViewComments(!viewComments)} className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                     <path
@@ -288,7 +340,13 @@ function TopArticles() {
                   </svg>
                   20 Comments
                 </div>
-                <div className="w-fit p-[10px]">
+                <div
+                  onClick={() => {
+                    setAddComments(!addComments);
+                    setViewComments(false);
+                  }}
+                  className=" cursor-pointer w-fit p-[10px]"
+                >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 4.5H16.5M13.5 1.5V7.5" stroke="#001F3F" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                     <path
@@ -328,6 +386,8 @@ function TopArticles() {
           </div>
         </div>
       </div>
+      {viewComments && <ViewComment viewComments={viewComments} setViewComments={setViewComments} />}
+      {addComments && <AddComment addComments={addComments} setAddComments={setAddComments} />}
     </>
   );
 }

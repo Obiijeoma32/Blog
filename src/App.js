@@ -6,8 +6,9 @@ import People from "./Component/People";
 import Place from "./Component/Place";
 import Business from "./Component/Business";
 import Inn from "./Component/Inn";
-import "./App.css";
 import Individuals from "./Component/Individuals";
+import Journey from "./Component/Journey";
+import "./App.css";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/business" element={<Business />} />
           <Route path="/inn" element={<Inn />} />
           <Route path="/individual" element={<Individuals />} />
+          <Route path="/journey" element={<Journey />} />
         </Routes>
       </BrowserRouter>
     </>

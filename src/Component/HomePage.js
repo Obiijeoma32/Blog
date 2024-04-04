@@ -10,15 +10,27 @@ import Culture from "./Culture";
 import Explore from "./Explore";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
+import { useRef } from "react";
 // import People from "./People";
 // import Place from "./Place";
 // import Business from "./Business";
 // import Inn from "./Inn";
 
 function HomePage() {
+  const stories = useRef(null);
+  const about = useRef(null);
+  const spotlight = useRef(null);
+  const contact = useRef(null);
+
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
-      <Header />
+      <Header scrollToSection={scrollToSection} about={about} stories={stories} spotlight={spotlight} contact={contact} />
       <div className="  mt-[80px] w-full flex flex-col items-center justify-center ">
         {/* Large screens */}
         <div className="3xxS:hidden 13inch:flex w-[90%] 4xS:w-[75%] h-[551px]  gap-[90px] flex justify-between items-center ">
@@ -64,12 +76,20 @@ function HomePage() {
       {/* Space Nav Page */}
       <div className="w-full    mt-12  flex-col justify-start items-center flex">
         <Section>{[<TopArticles />]}</Section>
-        <Individuals />
-        <Innovation />
+        <div className="w-full   flex-col justify-start items-center flex" ref={spotlight}>
+          <Individuals />
+        </div>
+        <div className="w-full   flex-col justify-start items-center flex" ref={stories}>
+          <Innovation />
+        </div>
         <Culture />
         <Explore />
-        <AboutUs />
-        <Footer />
+        <div className="w-full   flex-col justify-start items-center flex" ref={about}>
+          <AboutUs />
+        </div>
+        <div ref={contact}>
+          <Footer />
+        </div>
       </div>
     </>
   );

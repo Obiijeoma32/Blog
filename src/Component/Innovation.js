@@ -1,7 +1,10 @@
+import { useState } from "react";
 import story1 from "./Images/innovation1.png";
 import story2 from "./Images/innovation2.png";
 import story3 from "./Images/innovation3.png";
+import ViewComment from "./ViewComment";
 function Innovation() {
+  const [viewComments, setViewComments] = useState(false);
   return (
     <>
       {/* Large Screens */}
@@ -10,7 +13,7 @@ function Innovation() {
           <div className="text-sky-950 text-4xl font-semibold font-['Montserrat'] tracking-tight">Innovate Today, Shape Tomorrow</div>
           <div className="flex w-full flex-grow flex-col justify-between items-start gap-[40px]">
             <div className="flex  13inch:gap-[70px] 3xS:space-x-96 flex-1 justify-between items-center">
-              <div className="flex flex-col items-start gap-[10px] ">
+              <div cla onClick={() => setViewComments(!viewComments)} ssName="flex cursor-pointer  flex-col items-start gap-[10px] ">
                 <div className="p-2.5 bg-[#F0F0F0] bg-opacity-90 rounded-[40px] justify-center items-center  text-stone-500 text-sm font-normal font-['Montserrat'] tracking-tight flex">5 min read</div>
 
                 <div className="text-sky-950 text-2xl font-medium font-['Montserrat'] leading-9 tracking-tight">QuantumTech Solutions</div>
@@ -60,7 +63,10 @@ function Innovation() {
                 </div>
                 <div className=" flex w-full gap-[20px] justify-start items-center">
                   <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-                  <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+                  <div
+                    onClick={() => setViewComments(!viewComments)}
+                    className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex"
+                  >
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                       <path
@@ -100,7 +106,10 @@ function Innovation() {
                 </div>
                 <div className=" flex w-full gap-[20px] justify-start items-center">
                   <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-                  <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+                  <div
+                    onClick={() => setViewComments(!viewComments)}
+                    className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex"
+                  >
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                       <path
@@ -145,7 +154,7 @@ function Innovation() {
           </div>
           <div className=" flex w-full gap-[20px] justify-start items-center">
             <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-            <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+            <div onClick={() => setViewComments(!viewComments)} className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                 <path
@@ -180,7 +189,7 @@ function Innovation() {
           </div>
           <div className=" flex w-full gap-[20px] justify-start items-center">
             <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-            <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+            <div onClick={() => setViewComments(!viewComments)} className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                 <path
@@ -215,7 +224,7 @@ function Innovation() {
           </div>
           <div className=" flex w-full gap-[20px] justify-start items-center">
             <div className="w-fit p-[10px] text-zinc-800 text-sm font-medium font-montserrat tracking-tight">Jan 10, 2024</div>
-            <div className="text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
+            <div onClick={() => setViewComments(!viewComments)} className=" cursor-pointer text-sky-950 text-sm font-normal font-montserrat tracking-tight p-[10px] bg-zinc-100 bg-opacity-90 rounded-[40px] justify-center items-center gap-[10px] flex">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 10.125H12M6 6.375H9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                 <path
@@ -241,6 +250,7 @@ function Innovation() {
           </div>
         </div>
       </div>
+      {viewComments && <ViewComment viewComments={viewComments} setViewComments={setViewComments} />}
     </>
   );
 }

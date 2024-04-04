@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "./Images/bestofus.png";
-const Header = () => {
+const Header = ({ scrollToSection, stories, about, spotlight, contact }) => {
   const [hamburger, setHamburger] = useState(false);
   return (
     <>
       {/* Large screens */}
       <div className="w-full 3xxS:hidden 13inch:flex   h-[120px] px-[89px] py-[30px] justify-between items-center ">
-        <img width={70} height={60} src={logo} alt="The Best Of Us" />
+        <Link to="/">
+          <img width={70} height={60} src={logo} alt="The Best Of Us" />
+        </Link>
         <div className="h-[42px] w-[250px] 4xS:w-[350px] px-5 py-3 bg-zinc-100 bg-opacity-90 rounded-[40px] border border-neutral-400 justify-start items-center gap-2.5 flex">
           <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.7916 13.125L17.1666 16.5" stroke="#939393" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -22,10 +24,18 @@ const Header = () => {
           <input className="text-neutral-400 outline-none border-none w-full bg-transparent h-full text-sm font-normal " placeholder="Search Articles......." />
         </div>
         <div className="justify-start items-center gap-[50px] flex">
-          <div className="text-sky-950  text-lg font-normal font-montserrat  tracking-tight">Stories</div>
-          <div className="text-sky-950 text-lg font-normal font-montserrat  tracking-tight">About Us</div>
-          <div className="text-sky-950 text-lg font-normal font-montserrat  tracking-tight">Spotlight</div>
-          <div className="text-sky-950 text-lg font-normal font-montserrat  tracking-tight">Contact Us</div>
+          <div onClick={() => scrollToSection(stories)} className=" cursor-pointer text-sky-950  text-lg font-normal font-montserrat  tracking-tight">
+            Stories
+          </div>
+          <div onClick={() => scrollToSection(about)} className=" cursor-pointer text-sky-950 text-lg font-normal font-montserrat  tracking-tight">
+            About Us
+          </div>
+          <div onClick={() => scrollToSection(spotlight)} className=" cursor-pointer text-sky-950 text-lg font-normal font-montserrat  tracking-tight">
+            Spotlight
+          </div>
+          <div onClick={() => scrollToSection(contact)} className=" cursor-pointer text-sky-950 text-lg font-normal font-montserrat  tracking-tight">
+            Contact Us
+          </div>
         </div>
         <Link to="/write">
           <button className="flex justify-between gap-[10px] items-center">

@@ -60,7 +60,7 @@ function Individuals() {
           </div>
         </div>
         <div className=" w-full flex justify-end">
-          <Link to="">
+          <Link to="/journey">
             <div className="px-[30px] py-[15px] rounded-[20px] border border-green-500 justify-center items-center  gap-2.5 inline-flex text-sky-950 text-xl font-medium font-['Montserrat'] leading-[25px] tracking-tight">
               Explore Their Journeys{" "}
               <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">

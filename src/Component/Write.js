@@ -48,7 +48,7 @@ function Write() {
                   />
                   <path d="M13.3333 23.9999C16.2482 20.5167 19.516 15.9227 24.3316 19.0283" stroke="#2ECC71" stroke-width="1.5" />
                 </svg>
-                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className=" cursor-pointer" onClick={() => setAddButton(false)} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="#2ECC71" />
                   <path d="M20 24.0007H16" stroke="#2ECC71" stroke-linecap="round" stroke-linejoin="round" />
                   <path
