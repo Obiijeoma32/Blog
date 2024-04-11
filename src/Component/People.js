@@ -5,7 +5,7 @@ function People() {
   return (
     <>
       {/* Large Screens */}
-      <div className="  pb-[40px] 14inch:w-[1220px] 3xS:w-[74%] 14inch:flex 3xxS:hidden justify-start  items-start ">
+      <div className="  pb-[40px] 14inch:w-[1220px] 3xS:w-[76%] 14inch:flex 3xxS:hidden justify-start  items-start ">
         <div className="  h-fit relative overflow-x-scroll  items-center gap-[40px] inline-flex">
           <div className="pt-10 w-[496px] bg-sky-950 bg-opacity-10 rounded-[20px] flex-col justify-start items-center inline-flex">
             <img alt="Post" className="w-[250px]" src={ada} />

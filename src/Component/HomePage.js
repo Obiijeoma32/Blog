@@ -15,8 +15,8 @@ import Trending from "./Trending";
 import People from "./People";
 import Business from "./Business";
 import Inn from "./Inn";
+import Place from "./Place";
 // import People from "./People";
-// import Place from "./Place";
 // import Business from "./Business";
 // import Inn from "./Inn";
 
@@ -79,7 +79,7 @@ function HomePage() {
       </div>
       {/* Space Nav Page */}
       <div className="w-full    mt-12  flex-col justify-start items-center flex">
-        <Section>{[<TopArticles />, <Trending />, <People />, <Business />, <Inn />]}</Section>
+        <Section>{[<TopArticles />, <Trending />, <People />, <Business />, <Inn />, <Place />]}</Section>
         <div className="w-full   flex-col justify-start items-center flex" ref={spotlight}>
           <Individuals />
         </div>
