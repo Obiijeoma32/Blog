@@ -4,7 +4,7 @@ function Footer() {
 
   return (
     <>
-      <div className=" px-[32px] flex justify-center flex-col items-center py-[49px] bg-[#001F3F] w-full mt-[100px] h-fit">
+      <div className=" px-[32px] flex justify-center flex-col items-center py-[49px]  bg-[#001F3F] w-full  mt-[100px] h-fit">
         {/* Large Screens */}
         <div className=" 13inch:flex 3xxS:hidden flex-col justify-center  items-center">
           <div className="flex gap-[100px] justify-between items-center">

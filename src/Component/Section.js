@@ -27,8 +27,7 @@ function Section({ children }) {
     },
     {
       name: "Trending",
-
-      path: "",
+      path: "/trending",
       title: "Trending",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +45,7 @@ function Section({ children }) {
     {
       name: "People",
 
-      path: "/individual",
+      path: "/people",
       title: "People",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +93,7 @@ function Section({ children }) {
     {
       name: "Innovation",
 
-      path: "",
+      path: "/inn",
       title: "Innovation",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

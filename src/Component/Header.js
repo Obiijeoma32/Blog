@@ -24,38 +24,38 @@ const Header = ({ scrollToSection, stories, about, spotlight, contact }) => {
           <input className="text-neutral-400 outline-none border-none w-full bg-transparent h-full text-sm font-normal " placeholder="Search Articles......." />
         </div>
         <div className="justify-start items-center gap-[50px] flex">
-          <div onClick={() => scrollToSection(stories)} className=" cursor-pointer text-sky-950  text-lg font-normal font-montserrat  tracking-tight">
+          <div onClick={() => scrollToSection(stories)} className=" cursor-pointer text-sky-950 hover:text-[#2BC663]  text-lg font-normal font-montserrat  tracking-tight">
             Stories
           </div>
-          <div onClick={() => scrollToSection(about)} className=" cursor-pointer text-sky-950 text-lg font-normal font-montserrat  tracking-tight">
+          <div onClick={() => scrollToSection(about)} className=" cursor-pointer text-sky-950 hover:text-[#2BC663] text-lg font-normal font-montserrat  tracking-tight">
             About Us
           </div>
-          <div onClick={() => scrollToSection(spotlight)} className=" cursor-pointer text-sky-950 text-lg font-normal font-montserrat  tracking-tight">
+          <div onClick={() => scrollToSection(spotlight)} className=" cursor-pointer text-sky-950 hover:text-[#2BC663] text-lg font-normal font-montserrat  tracking-tight">
             Spotlight
           </div>
-          <div onClick={() => scrollToSection(contact)} className=" cursor-pointer text-sky-950 text-lg font-normal font-montserrat  tracking-tight">
+          <div onClick={() => scrollToSection(contact)} className=" cursor-pointer text-sky-950 hover:text-[#2BC663] text-lg font-normal font-montserrat  tracking-tight">
             Contact Us
           </div>
         </div>
         <Link to="/write">
-          <button className="flex justify-between gap-[10px] items-center">
+          <button className="flex justify-between gap-[10px] text-lg font-normal font-montserrat  tracking-tight text-sky-950  hover:text-[#2BC663] items-center">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20.2676 6.22798L22.0198 4.47578C22.9875 3.50807 24.5565 3.50807 25.5242 4.47578C26.4919 5.4435 26.4919 7.01247 25.5242 7.98018L23.772 9.73238M20.2676 6.22798L13.7252 12.7704C12.4187 14.077 11.7653 14.7302 11.3205 15.5264C10.8756 16.3225 10.428 18.2024 10 20C11.7976 19.572 13.6775 19.1244 14.4736 18.6795C15.2698 18.2346 15.923 17.5814 17.2296 16.2747L23.772 9.73238M20.2676 6.22798L23.772 9.73238"
-                stroke="#001F3F"
+                stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M26.25 15C26.25 20.3032 26.25 22.955 24.6025 24.6025C22.955 26.25 20.3032 26.25 15 26.25C9.6967 26.25 7.04505 26.25 5.39752 24.6025C3.75 22.955 3.75 20.3032 3.75 15C3.75 9.6967 3.75 7.04505 5.39752 5.39752C7.04505 3.75 9.6967 3.75 15 3.75"
-                stroke="#001F3F"
+                stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
               />
             </svg>
 
-            <div className="text-sky-950 text-lg font-normal font-montserrat  tracking-tight">Write</div>
+            <div className=" ">Write</div>
           </button>
         </Link>
       </div>

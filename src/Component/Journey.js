@@ -146,7 +146,7 @@ function Journey() {
       </>
       {/* Large Screens */}
       <div className="13inch:flex 3xxS:hidden w-full mt-[123px] flex justify-center items-center  ">
-        <div className="w-[85%] gap-[100px] flex-col flex justify-between items-center">
+        <div className="w-[85%] 4xxS:max-w-[75%] gap-[100px] flex-col flex justify-between items-center">
           <div className="flex gap-[50px] justify-between items-center ">
             <div className=" gap-[15px] flex flex-col items-start">
               <div className="text-sky-950 text-[34px] font-semibold font-['Montserrat'] tracking-tight">Adaku Nwosu</div>

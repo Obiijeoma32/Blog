@@ -6,8 +6,8 @@ function Business() {
     <>
       {/* Large Screens */}
       <div className=" 13inch:flex 3xxS:hidden flex-col w-[85%] justify-between  gap-[70px] items-start">
-        <div className=" w-full gap-[40px] flex justify-between items-center">
-          <div className=" w-full flex flex-col justify-between flex-grow  ">
+        <div className=" w-full gap-[40px] flex flex-grow justify-between items-center">
+          <div className=" w-full flex flex-1 flex-col justify-between flex-grow  ">
             <img className=" w-full" src={explore1} alt="Explore" />
             <div className=" w-full  pl-10 pr-[69px] py-3  rounded-b-[20px] mt-[-150px] bg-white bg-opacity-80 flex-col justify-center items-start gap-2.5 inline-flex">
               <div className="flex-col justify-start items-start gap-2.5 flex">
@@ -18,7 +18,7 @@ function Business() {
               </div>
             </div>
           </div>
-          <div className=" w-full flex flex-col justify-between flex-grow  ">
+          <div className=" w-full flex flex-col flex-1 justify-between flex-grow  ">
             <img className=" w-full" src={explore2} alt="Explore" />
             <div className=" w-full h-[150px]  pl-10 pr-[69px] py-3  rounded-b-[20px] mt-[-150px] bg-white bg-opacity-80 flex-col justify-center items-start gap-2.5 inline-flex">
               <div className="flex-col justify-start items-start gap-2.5 flex">

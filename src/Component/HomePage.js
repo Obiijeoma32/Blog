@@ -11,6 +11,10 @@ import Explore from "./Explore";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 import { useRef } from "react";
+import Trending from "./Trending";
+import People from "./People";
+import Business from "./Business";
+import Inn from "./Inn";
 // import People from "./People";
 // import Place from "./Place";
 // import Business from "./Business";
@@ -75,7 +79,7 @@ function HomePage() {
       </div>
       {/* Space Nav Page */}
       <div className="w-full    mt-12  flex-col justify-start items-center flex">
-        <Section>{[<TopArticles />]}</Section>
+        <Section>{[<TopArticles />, <Trending />, <People />, <Business />, <Inn />]}</Section>
         <div className="w-full   flex-col justify-start items-center flex" ref={spotlight}>
           <Individuals />
         </div>
@@ -87,9 +91,9 @@ function HomePage() {
         <div className="w-full   flex-col justify-start items-center flex" ref={about}>
           <AboutUs />
         </div>
-        <div ref={contact}>
-          <Footer />
-        </div>
+      </div>
+      <div ref={contact}>
+        <Footer />
       </div>
     </>
   );
